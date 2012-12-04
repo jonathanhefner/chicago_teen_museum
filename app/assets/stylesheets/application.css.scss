@@ -12,4 +12,19 @@
  *= require_tree .
  */
 
+@import 'bourbon';
+@import 'neat';
 @import 'flutie';
+
+
+header, footer {
+  padding: $gutter;
+}
+
+.content {
+  @include outer-container;
+}
+
+header, footer {
+  background-color: black;
+}
