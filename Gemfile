@@ -15,6 +15,8 @@ gem 'neat'
 gem 'flutie'
 gem 'high_voltage'
 
+gem 'paperclip'
+
 group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'sass-rails',   '~> 3.2.3'

@@ -34,4 +34,10 @@ ChicagoTeenMuseum::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Point Paperclip to ImageMagick
+  Paperclip.options[:command_path] = File.join('D:', 'ImageMagick-6.8.0-Q16')
+  Paperclip.options[:swallow_stderr] = false
+  Paperclip.options[:log] = true
+  Paperclip.options[:log_command] = true
 end
