@@ -1,12 +1,11 @@
 class User < ActiveRecord::Base
   include Clearance::User
 
-  DEFAULT_TYPE = 'regular'
-  ADMIN_TYPE = 'admin'
+  ADMIN_ROLE = 'admin'
 
   attr_accessible :name, :birthday, :biography
 
   def admin?
-    self.type == ADMIN_TYPE
+    self.role == ADMIN_ROLE
   end
 end
