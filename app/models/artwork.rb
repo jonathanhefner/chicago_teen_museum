@@ -13,4 +13,8 @@ class Artwork < ActiveRecord::Base
   def image?
     asset_content_type.starts_with?('image')
   end
+
+  def thumb_url
+    asset.url(:thumb)
+  end
 end
