@@ -12,4 +12,19 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.masonry
 //= require_tree .
+
+$(function() {
+    var thumbs = $('ul.thumbs');
+    var thumbMargin = parseInt(thumbs.children('li').css('margin-bottom'));
+    thumbs.imagesLoaded(function() {
+        this.masonry({
+            itemSelector: 'li',
+            isFitWidth: true,
+            columnWidth: 300,
+            gutterWidth: thumbMargin
+        });
+    });
+
+});

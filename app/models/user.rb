@@ -8,4 +8,8 @@ class User < ActiveRecord::Base
   def admin?
     self.role == ADMIN_ROLE
   end
+
+  def display_name
+    @display_name ||= name || "Anonymous (#{id})"
+  end
 end

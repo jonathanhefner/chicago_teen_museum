@@ -22,7 +22,27 @@ header, footer {
 }
 
 .content {
-  @include outer-container;
+  padding: 2em 5% 2em 5%;
+}
+
+ul.thumbs {
+  list-style-type: none;
+  margin: 0 auto;
+
+  li {
+    margin-bottom: 15px;
+    background: white;
+    @include box-shadow(0px 2px 6px #bbb);
+
+    .caption {
+      padding: 0.5em;
+    }
+
+    img.thumb {
+      margin: 0;
+    }
+  }
+
 }
 
 header, footer {
