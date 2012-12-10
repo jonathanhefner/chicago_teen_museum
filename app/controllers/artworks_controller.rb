@@ -2,20 +2,13 @@ class ArtworksController < ApplicationController
   load_and_authorize_resource
   respond_to :html
 
-  def show
-    respond_with(@artwork)
-  end
-
-  def new
-    respond_with(@artwork)
+  def index
+    @artworks = @artworks.includes(:user).page(params[:page])
+    respond_with(@artworks)
   end
 
   def create
     @artwork.save
-    respond_with(@artwork)
-  end
-
-  def edit
     respond_with(@artwork)
   end
 

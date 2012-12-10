@@ -22,7 +22,7 @@ $shadow-color: #bbb;
 
 
 body {
-  background: #eee;
+  background: #f8f8f8;
 }
 
 
@@ -37,7 +37,7 @@ header {
     margin: 0;
 
     li {
-      display: inline-block;
+      @include inline-block;
       border-left: 1px solid $shadow-color;
       padding: 0 1em;
 
@@ -73,6 +73,36 @@ footer {
 }
 
 
+h3 > a, h3 > a:link, h3 > a:visited {
+  text-decoration: none;
+  &:hover { text-decoration: underline; }
+}
+
+
+h1 {
+  @include inline-block;
+}
+
+
+.pagination {
+  @include inline-block;
+  margin: -1em 0 0 1em;
+  vertical-align: middle;
+
+  a {
+    @include button(simple, #fff);
+    padding: 0.5em 1em;
+  }
+
+  .current {
+    @include button(simple, #555);
+    padding: 0.5em 1em;
+    cursor: default !important;
+    pointer-events: none;
+  }
+}
+
+
 ul.thumbs {
   list-style-type: none;
   margin: 0 auto;
@@ -101,10 +131,4 @@ ul.thumbs {
       margin: 0;
     }
   }
-}
-
-
-h3 > a, h3 > a:link, h3 > a:visited {
-  text-decoration: none;
-  &:hover { text-decoration: underline; }
 }

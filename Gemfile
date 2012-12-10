@@ -6,6 +6,7 @@ gem 'sqlite3'
 
 gem 'clearance', '1.0.0.rc2'
 gem 'cancan'
+gem 'kaminari'
 
 gem 'haml'
 gem 'haml-rails' # https://github.com/indirect/haml-rails
