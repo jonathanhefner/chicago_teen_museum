@@ -7,17 +7,22 @@
 
   %body{class: body_class}
     %header
-      = link_to image_tag('logo_small.png'), root_path
-      - if signed_in?
-        = current_user.email
-        |
-        = link_to 'Profile', current_user
-        |
-        = link_to 'Sign Out', sign_out_path, method: :delete
-      - else
-        = link_to 'Sign Up', sign_up_path
-        or
-        = link_to 'Sign In', sign_in_path
+      %ul.navigation
+        %li= link_to image_tag('logo_small.png'), root_path
+        %li>
+          %h3= link_to 'Galleries', galleries_path
+        %li>
+          %h3= link_to 'Art Works', artworks_path
+        %li>
+          %h3= link_to 'You!', (signed_in? ? current_user : sign_in_path)
+
+      .auth
+        - if signed_in?
+          = link_to 'Sign Out', sign_out_path, method: :delete
+        - else
+          = link_to 'Sign Up', sign_up_path
+          or
+          = link_to 'Sign In', sign_in_path
 
     .content
       = yield
