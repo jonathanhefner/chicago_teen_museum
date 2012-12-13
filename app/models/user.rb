@@ -3,7 +3,9 @@ class User < ActiveRecord::Base
 
   ADMIN_ROLE = 'admin'
 
-  attr_accessible :name, :birthday, :biography
+  has_many :artworks, order: 'created_at DESC'
+
+  attr_accessible :email, :name, :biography, :birthday
 
   def admin?
     self.role == ADMIN_ROLE

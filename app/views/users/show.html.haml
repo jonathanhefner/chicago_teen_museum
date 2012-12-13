@@ -1,3 +1,15 @@
-%h1= @user.name
+%h1.name= @user.name
 
-%p= @user.biography
+- if @user == current_user
+  = link_to 'Edit Profile', edit_user_path(current_user), class: 'action'
+
+.biography
+  :markdown
+    #{@user.biography}
+
+%h2= link_to 'Recent Artwork', artworks_path(user: @user)
+
+- if @user == current_user
+  = link_to 'Post Artwork', new_artwork_path, class: 'action'
+
+= render 'shared/artworks_thumbs', artworks: @user.artworks.limit(9)

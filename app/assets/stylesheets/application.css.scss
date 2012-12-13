@@ -27,7 +27,7 @@ body {
 
 
 header {
-  @include clearfix();
+  @include clearfix;
   background: url(header_background.png);
   @include box-shadow(0 0 14px $shadow-color);
   padding: 0.25em;
@@ -73,13 +73,22 @@ footer {
 }
 
 
+h2 > a, h2 > a:link, h2 > a:visited,
 h3 > a, h3 > a:link, h3 > a:visited {
   text-decoration: none;
   &:hover { text-decoration: underline; }
 }
 
 
-h1 {
+a.action {
+  @include button(simple);
+  margin: -1em 0 0 1em;
+  vertical-align: middle;
+  padding: 0.5em 1em;
+}
+
+
+h1, h2 {
   @include inline-block;
 }
 

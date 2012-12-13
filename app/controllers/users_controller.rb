@@ -3,15 +3,9 @@ class UsersController < Clearance::UsersController
   authorize_resource only: [:new, :create]
   respond_to :html
 
-  def show
-    respond_with(@user)
-  end
-
-  def edit
-    respond_with(@user)
-  end
-
   def update
+    @user.update_attributes(params[:user])
+    @user.save
     respond_with(@user)
   end
 end

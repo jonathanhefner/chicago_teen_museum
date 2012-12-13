@@ -4,6 +4,7 @@ class ArtworksController < ApplicationController
 
   def index
     @artworks = @artworks.includes(:user).page(params[:page])
+    @artworks = @artworks.where(user_id: params[:user]) if params[:user]
     respond_with(@artworks)
   end
 

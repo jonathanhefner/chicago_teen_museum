@@ -10,6 +10,7 @@ gem 'kaminari'
 
 gem 'haml'
 gem 'haml-rails' # https://github.com/indirect/haml-rails
+gem 'rdiscount'
 gem 'formtastic'
 gem 'bourbon'
 gem 'neat'
