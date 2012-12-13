@@ -1,4 +1,4 @@
-%h1 Galleries
+%h1= pluralize(@galleries.total_count, 'Gallery')
 
 %ul.thumbs
   - @galleries.each do |g|

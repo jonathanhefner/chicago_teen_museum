@@ -1,4 +1,4 @@
-%h1 Artworks
+%h1= pluralize(@artworks.total_count, 'Work')
 
 = paginate @artworks
 
