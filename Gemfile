@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.9'
 gem 'jquery-rails'
-gem 'sqlite3'
+gem 'sqlite3', group: :development
+gem 'pg', group: :production
 
 gem 'clearance', '1.0.0.rc2'
 gem 'cancan'
