@@ -4,6 +4,6 @@ ChicagoTeenMuseum::Application.routes.draw do
 
   resources :users, :artworks, :galleries
 
-  match '/:id' => 'high_voltage/pages#show', as: :static, via: :get
+  get '/about' => 'high_voltage/pages#show', id: 'about'
 
 end
