@@ -18,6 +18,7 @@
 
 
 $thumb-width: 300px;
+$thumb-min-height: 120px;
 $shadow-color: #bbb;
 
 
@@ -93,6 +94,16 @@ h1, h2 {
 }
 
 
+h1.name, .byline, .posted {
+  font-style: italic;
+}
+
+
+.byline, .posted {
+  color: #666;
+}
+
+
 .pagination {
   @include inline-block;
   margin: -1em 0 0 1em;
@@ -104,7 +115,7 @@ h1, h2 {
   }
 
   .current {
-    @include button(simple, #555);
+    @include button(simple, #666);
     padding: 0.5em 1em;
     cursor: default !important;
     pointer-events: none;
@@ -132,12 +143,23 @@ ul.thumbs {
       .byline {
         margin: 0;
         text-align: right;
-        font-style: italic;
       }
     }
+  }
+}
 
-    img.thumb {
-      margin: 0;
-    }
+
+.image-container {
+  width: 100%;
+  background: #333;
+  text-align: center;
+  min-height: $thumb-min-height;
+  line-height: $thumb-min-height; // used with &nbsp; to vertically center image
+  font-size: 0; // prevents extra space when using line-height + &nbsp;
+
+  img {
+    max-width: 100%;
+    vertical-align: middle;
+    margin: 0;
   }
 }

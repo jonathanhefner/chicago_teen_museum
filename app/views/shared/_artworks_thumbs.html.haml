@@ -1,9 +1,10 @@
 %ul.thumbs
   - artworks.each do |a|
     %li
-      = link_to image_tag(a.thumb_url, class: 'thumb'), a
+      .image-container
+        = link_to image_tag(a.thumb_url, class: 'thumb'), a
       .caption
         %h3= link_to a.title, a
         %p.byline
           by
-          = link_to a.user.display_name, a.user
+          = link_to a.user

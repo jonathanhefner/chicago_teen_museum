@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
     self.role == ADMIN_ROLE
   end
 
-  def display_name
+  def to_s
     @display_name ||= name || "Anonymous (#{id})"
   end
 end

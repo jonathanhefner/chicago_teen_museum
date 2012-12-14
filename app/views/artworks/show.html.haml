@@ -1,3 +1,21 @@
-%h1= @artwork.title
+%h1.name= @artwork.title
 
-= image_tag @artwork.asset.url
+%p.byline
+  by
+  = link_to @artwork.user
+
+- if @artwork.user == current_user
+  = link_to 'Edit Artwork', edit_artwork_path(@artwork), class: 'action'
+
+.image-container
+  = link_to image_tag(@artwork.asset.url), @artwork.asset.url
+  &nbsp;
+
+%p.posted
+  Posted
+  = distance_of_time_in_words_to_now @artwork.created_at
+  ago
+
+.description
+  :markdown
+    #{@artwork.description}
