@@ -17,6 +17,7 @@
 @import 'flutie';
 
 
+$footer-height: 3em;
 $thumb-width: 300px;
 $thumb-min-height: 120px;
 $shadow-color: #bbb;
@@ -24,6 +25,7 @@ $shadow-color: #bbb;
 
 body {
   background: #f8f8f8;
+  position: relative;
 }
 
 
@@ -65,12 +67,17 @@ header {
 
 
 .content {
-  padding: 2em 5% 2em 5%;
+  padding: 2em 5% (2em + $footer-height) 5%;
 }
 
 
-footer {
-  padding: 1em;
+body > footer {
+  background: #eee;
+  position: absolute;
+  bottom: 0;
+  height: $footer-height;
+  width: 100%;
+  padding: 1em 1.5em 0 1.5em;
 }
 
 
