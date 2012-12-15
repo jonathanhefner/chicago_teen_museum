@@ -1,7 +1,7 @@
 %h1.name= @user
 
-- if @user == current_user
-  = link_to 'Edit Profile', edit_user_path(current_user), class: 'action'
+- if can?(:update, @user)
+  = link_to 'Edit Profile', edit_user_path(@user), class: 'action'
 
 .biography
   :markdown
@@ -9,7 +9,7 @@
 
 %h2= link_to 'Recent Artwork', artworks_path(user: @user)
 
-- if @user == current_user
+- if @user == current_user && can?(:create, Artwork)
   = link_to 'Post Artwork', new_artwork_path, class: 'action'
 
 = render 'shared/artworks_thumbs', artworks: @user.artworks.limit(9)

@@ -4,7 +4,7 @@
   by
   = link_to @artwork.user
 
-- if @artwork.user == current_user
+- if can?(:update, @artwork)
   = link_to 'Edit Artwork', edit_artwork_path(@artwork), class: 'action'
 
 .image-container
