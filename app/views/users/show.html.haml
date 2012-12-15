@@ -1,4 +1,4 @@
-%h1.name= @user.name
+%h1.name= @user
 
 - if @user == current_user
   = link_to 'Edit Profile', edit_user_path(current_user), class: 'action'

@@ -12,6 +12,6 @@ class User < ActiveRecord::Base
   end
 
   def to_s
-    @display_name ||= name || "Anonymous (#{id})"
+    @display_name ||= name.present? ? name : "Anonymous (#{id})"
   end
 end
