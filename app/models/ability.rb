@@ -8,7 +8,7 @@ class Ability
       can :read, [Artwork, Gallery, User]
 
       if user
-        can [:update, :destroy], Artwork, user_id: user.id
+        can [:create, :update, :destroy], Artwork, user_id: user.id
         can [:update, :destroy], User, id: user.id
       else
         can :create, User, type: 'normal'
