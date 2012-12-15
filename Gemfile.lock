@@ -41,6 +41,13 @@ GEM
       diesel (= 0.1.5)
       rails (>= 3.0)
     cocaine (0.4.2)
+    coffee-rails (3.2.2)
+      coffee-script (>= 2.2.0)
+      railties (~> 3.2.0)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.4.0)
     diesel (0.1.5)
       railties
     diff-lcs (1.1.3)
@@ -152,6 +159,7 @@ DEPENDENCIES
   bourbon
   cancan
   clearance (= 1.0.0.rc2)
+  coffee-rails (~> 3.2.1)
   flutie
   formtastic
   haml
