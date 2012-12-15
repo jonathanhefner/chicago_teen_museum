@@ -2,4 +2,7 @@
 
 = paginate @artworks
 
+- if can?(:create, Artwork)
+  = link_to 'Post Artwork', new_artwork_path, class: 'action'
+
 = render 'shared/artworks_thumbs', artworks: @artworks

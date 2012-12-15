@@ -1,5 +1,8 @@
 %h1= pluralize(@galleries.total_count, 'Gallery')
 
+- if can?(:create, Gallery)
+  = link_to 'Create Gallery', new_gallery_path, class: 'action'
+
 %ul.thumbs
   - @galleries.each do |g|
     %li
