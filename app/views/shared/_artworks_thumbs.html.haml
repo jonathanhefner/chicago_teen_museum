@@ -1,3 +1,6 @@
+- artworks ||= []
+- specific_user ||= false
+
 %ul.thumbs
   - artworks.each do |a|
     %li
@@ -5,6 +8,7 @@
         = link_to image_tag(a.thumb_url, class: 'thumb'), a
       .caption
         %h3= link_to a.title, a
-        %p.byline
-          by
-          = link_to a.user, user_path(a.user)
+        - unless specific_user
+          %p.byline
+            by
+            = link_to a.user, user_path(a.user)

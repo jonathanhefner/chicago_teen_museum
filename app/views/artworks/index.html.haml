@@ -1,8 +1,13 @@
-%h1= pluralize(@artworks.total_count, 'Work')
+%h1
+  Exhibiting
+  = pluralize(@artworks.total_count, 'Work')
+  - if @user
+    by
+    = link_to @user, user_path(@user)
 
 = paginate @artworks
 
 - if can?(:create, Artwork)
   = link_to 'Post Artwork', new_artwork_path, class: 'action'
 
-= render 'shared/artworks_thumbs', artworks: @artworks
+= render 'shared/artworks_thumbs', artworks: @artworks, specific_user: @user.present?
