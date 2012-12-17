@@ -19,6 +19,7 @@ gem 'flutie'
 gem 'high_voltage'
 
 gem 'paperclip'
+gem 'aws-sdk', group: :production
 
 group :assets do
   gem 'uglifier', '>= 1.0.3'
