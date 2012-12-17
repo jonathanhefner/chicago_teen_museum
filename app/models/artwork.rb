@@ -10,6 +10,11 @@ class Artwork < ActiveRecord::Base
 
   attr_accessible :title, :asset, :description
 
+  scope :in_gallery, lambda {|gallery_id|
+    gallery_id = gallery_id.id if gallery_id.is_a?(Gallery)
+    joins(:galleries).where('artworks_galleries.gallery_id' => gallery_id)
+  }
+
   def image?
     asset_content_type.starts_with?('image')
   end

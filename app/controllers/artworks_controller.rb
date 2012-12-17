@@ -4,10 +4,17 @@ class ArtworksController < ApplicationController
 
   def index
     @artworks = @artworks.includes(:user).page(params[:page])
+
     if params[:user]
       @artworks = @artworks.where(user_id: params[:user])
       @user = User.find(params[:user])
     end
+
+    if params[:gallery]
+      @artworks = @artworks.in_gallery(params[:gallery])
+      @gallery = Gallery.find(params[:gallery])
+    end
+
     respond_with(@artworks)
   end
 

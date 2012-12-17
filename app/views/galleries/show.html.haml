@@ -1,3 +1,12 @@
 %h1= @gallery.title
 
-= render 'shared/artworks_thumbs', artworks: @gallery.artworks
+- if can?(:update, @gallery)
+  = link_to 'Edit Gallery', edit_gallery_path(@gallery), class: 'action'
+
+.description
+  :markdown
+    #{@gallery.description}
+
+%h2= link_to 'Recent Additions', artworks_path(gallery: @gallery)
+
+= render 'shared/artworks_thumbs', artworks: @gallery.artworks.limit(9)

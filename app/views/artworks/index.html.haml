@@ -4,6 +4,9 @@
   - if @user
     by
     = link_to @user, user_path(@user)
+  - if @gallery
+    in Gallery
+    = link_to @gallery, gallery_path(@gallery)
 
 = paginate @artworks
 

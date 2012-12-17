@@ -1,5 +1,5 @@
 class Gallery < ActiveRecord::Base
-  has_and_belongs_to_many :artworks
+  has_and_belongs_to_many :artworks, order: 'created_at DESC'
 
   validates :title, presence: true
 
@@ -7,5 +7,9 @@ class Gallery < ActiveRecord::Base
 
   def thumb_url
     @thumb_url ||= artworks.last.try(:thumb_url) || 'thumb_placeholder.png'
+  end
+
+  def to_s
+    title
   end
 end
