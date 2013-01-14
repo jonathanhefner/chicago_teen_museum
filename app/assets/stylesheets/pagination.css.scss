@@ -1,0 +1,21 @@
+@import 'bourbon';
+@import 'colors';
+
+
+.pagination {
+  @include inline-block;
+  margin: -1em 0 0 1em;
+  vertical-align: middle;
+
+  a {
+    @include button(simple, $white);
+    padding: 0.5em 1em;
+  }
+
+  .current {
+    @include button(simple, $dark-grey);
+    padding: 0.5em 1em;
+    cursor: default !important;
+    pointer-events: none;
+  }
+}

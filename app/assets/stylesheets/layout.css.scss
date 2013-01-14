@@ -1,0 +1,81 @@
+@import 'bourbon';
+@import 'neat';
+@import 'dimensions';
+@import 'colors';
+
+
+
+body {
+  background: $body-color;
+  color: $text-color;
+  h1, h2, h3, h4, h5, h6, p {
+    color: $text-color;
+  }
+}
+
+
+.header-outer, .content-outer, .footer-outer {
+  width: $grid-width + 2*$gutter-width;
+  margin: 0 auto;
+}
+
+.header-outer, .footer-outer {
+  padding: $gutter-width/2 0;
+}
+
+.header-outer, .content-outer {
+  background: $background-color;
+  box-shadow: 0px 1px 1em $body-shadow-color;
+}
+
+$outer-radius: 0.5em;
+
+.header-outer {
+  border-radius: 0 0 $outer-radius $outer-radius;
+}
+
+.content-outer {
+  margin-top: $gutter-width;
+  padding: $gutter-width 0;
+  border-radius: $outer-radius;
+}
+
+
+header, .content, footer {
+  @include outer-container; // grid
+}
+
+
+header {
+  nav.account {
+    @include span-columns(12);
+    margin: -0.5em 0 0.5em 0;
+    font-size: 0.75em;
+    text-align: right;
+  }
+
+  .logo, nav.menu, nav.actions {
+    @include span-columns(4);
+    text-align: center;
+
+    & > img, & > ul {
+      margin: 0;
+    }
+
+    li a {
+      font-size: 1.75em;
+      line-height: 2.25em;
+      padding: 0.25em 0.5em;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $text-color;
+      text-shadow: 1px 1px 1px $shadow-color;
+      &:hover {
+        border: 1px dashed $action-color;
+        border-radius: 0.5em;
+      }
+    }
+  }
+}
+

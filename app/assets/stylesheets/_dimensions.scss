@@ -1,0 +1,8 @@
+@import 'bourbon';
+@import 'neat';
+
+$grid-width: $column * $grid-columns + $gutter * ($grid-columns - 1);
+$gutter-width: $gutter;
+
+$image-thumbnail-width: 275px;
+$image-thumbnail-min-height: 120px;

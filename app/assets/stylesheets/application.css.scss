@@ -16,69 +16,7 @@
 @import 'neat';
 @import 'flutie';
 
-
-$footer-height: 3em;
-$thumb-width: 300px;
-$thumb-min-height: 120px;
-$shadow-color: #bbb;
-
-
-body {
-  background: #f8f8f8;
-  position: relative;
-}
-
-
-header {
-  @include clearfix;
-  background: url(header_background.png);
-  @include box-shadow(0 0 14px $shadow-color);
-  padding: 0.25em;
-
-  ul.navigation {
-    float: left;
-    margin: 0;
-
-    li {
-      @include inline-block;
-      border-left: 1px solid $shadow-color;
-      padding: 0 1em;
-
-      vertical-align: middle;
-      img { margin: 0; }
-
-      h3 > a {
-        color: #666;
-        &:hover { color: #333; }
-      }
-    }
-
-    li:first-child {
-      border: 0;
-    }
-
-  }
-
-  .auth {
-    float: right;
-    margin: 0.5em 1em 0 0;
-  }
-}
-
-
-.content {
-  padding: 2em 5% (2em + $footer-height) 5%;
-}
-
-
-body > footer {
-  background: #eee;
-  position: absolute;
-  bottom: 0;
-  height: $footer-height;
-  width: 100%;
-  padding: 1em 1.5em 0 1.5em;
-}
+@import 'colors';
 
 
 h1 > a, h1 > a:link, h1 > a:visited,
@@ -106,68 +44,6 @@ h1.name, .byline, .posted {
   font-style: italic;
 }
 
-
 .byline, .posted {
-  color: #666;
-}
-
-
-.pagination {
-  @include inline-block;
-  margin: -1em 0 0 1em;
-  vertical-align: middle;
-
-  a {
-    @include button(simple, #fff);
-    padding: 0.5em 1em;
-  }
-
-  .current {
-    @include button(simple, #666);
-    padding: 0.5em 1em;
-    cursor: default !important;
-    pointer-events: none;
-  }
-}
-
-
-ul.thumbs {
-  list-style-type: none;
-  margin: 0 auto;
-
-  li {
-    width: $thumb-width;
-    margin-bottom: $gutter;
-    background: white;
-    @include box-shadow(0px 2px 6px $shadow-color);
-
-    .caption {
-      padding: 0.75em;
-
-      h3 > a {
-        color: #111;
-      }
-
-      .byline {
-        margin: 0;
-        text-align: right;
-      }
-    }
-  }
-}
-
-
-.image-container {
-  width: 100%;
-  background: #333;
-  text-align: center;
-  min-height: $thumb-min-height;
-  line-height: $thumb-min-height; // used with &nbsp; to vertically center image
-  font-size: 0; // prevents extra space when using line-height + &nbsp;
-
-  img {
-    max-width: 100%;
-    vertical-align: middle;
-    margin: 0;
-  }
+  color: $light-text-color;
 }

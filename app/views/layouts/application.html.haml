@@ -6,26 +6,34 @@
     = csrf_meta_tags
 
   %body{class: body_class}
-    %header
-      %ul.navigation
-        %li= link_to image_tag('logo_small.png'), root_path
-        %li>
-          %h3= link_to 'Galleries', galleries_path
-        %li>
-          %h3= link_to 'Artwork', artworks_path
-        %li>
-          %h3= link_to 'You!', (signed_in? ? current_user : sign_in_path)
+    .header-outer
+      %header
+        %nav.account
+          - if signed_in?
+            = link_to 'Your Profile', (signed_in? ? current_user : sign_in_path)
+            |
+            = link_to 'Sign Out', sign_out_path, method: :delete
+          - else
+            = link_to 'Register', sign_up_path
+            |
+            = link_to 'Sign In', sign_in_path
+        .logo
+          = link_to image_tag('logo_small.png'), root_path
+        %nav.menu
+          %ul
+            %li= link_to 'Galleries', galleries_path
+            %li= link_to 'Artwork', artworks_path
+        %nav.actions
+          %ul
+            - if can?(:create, Gallery)
+              %li= link_to 'Create Gallery', new_gallery_path
+            - if can?(:create, Artwork)
+              %li= link_to 'Post Artwork', new_artwork_path
 
-      .auth
-        - if signed_in?
-          = link_to 'Sign Out', sign_out_path, method: :delete
-        - else
-          = link_to 'Sign Up', sign_up_path
-          or
-          = link_to 'Sign In', sign_in_path
+    .content-outer
+      .content
+        = yield
 
-    .content
-      = yield
-
-    %footer
-      = link_to 'About', about_path
+    .footer-outer
+      %footer
+        = link_to 'About', about_path

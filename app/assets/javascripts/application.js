@@ -22,7 +22,7 @@ $(function() {
         this.masonry({
             itemSelector: 'li',
             isFitWidth: true,
-            columnWidth: 300,
+            columnWidth: 275,
             gutterWidth: thumbMargin
         });
     });
