@@ -9,26 +9,20 @@
     .header-outer
       %header
         %nav.account
+          = link_to image_tag('logo_small.png'), root_path, class: 'logo'
+          = link_to 'About Us', page_path(:about)
           - if signed_in?
             = link_to 'Your Profile', (signed_in? ? current_user : sign_in_path)
-            |
             = link_to 'Sign Out', sign_out_path, method: :delete
-          - else
-            = link_to 'Register', sign_up_path
-            |
+            - else
+            = link_to 'Join Us!', sign_up_path, class: 'call-to-action'
             = link_to 'Sign In', sign_in_path
-        .logo
-          = link_to image_tag('logo_small.png'), root_path
-        %nav.menu
-          %ul
-            %li= link_to 'Galleries', galleries_path
-            %li= link_to 'Artwork', artworks_path
-        %nav.actions
-          %ul
-            - if can?(:create, Gallery)
-              %li= link_to 'Create Gallery', new_gallery_path
-            - if can?(:create, Artwork)
-              %li= link_to 'Post Artwork', new_artwork_path
+        %nav.content
+          = link_to 'Galleries', galleries_path
+          - if can?(:create, Gallery)
+            = link_to 'Create A Gallery!', new_gallery_path
+          = link_to 'Artwork', artworks_path
+          = link_to 'Post Your Artwork!', new_artwork_path, class: 'call-to-action'
 
     .content-outer
       .content

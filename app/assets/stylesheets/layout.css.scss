@@ -4,6 +4,9 @@
 @import 'colors';
 
 
+$logo-height: 40px;
+$navigation-font-size: 16px;
+
 
 body {
   background: $body-color;
@@ -47,34 +50,45 @@ header, .content, footer {
 
 
 header {
-  nav.account {
-    @include span-columns(12);
-    margin: -0.5em 0 0.5em 0;
-    font-size: 0.75em;
-    text-align: right;
+  nav.account, nav.content {
+    @include inline-block;
+    font-size: $navigation-font-size;
+    height: $logo-height;
+
+    & > a {
+      @include inline-block;
+      vertical-align: top;
+      padding-bottom: 0.25em;
+      border-bottom: 1px solid $light-grey;
+      text-decoration: none;
+      margin-top: 0.75em;
+      margin-left: 1em;
+      color: $light-text-color;
+
+      &:hover {
+        border-bottom: 1px solid $action-color;
+      }
+
+      &.call-to-action {
+        font-weight: bold;
+      }
+    }
   }
 
-  .logo, nav.menu, nav.actions {
-    @include span-columns(4);
-    text-align: center;
+  nav.content {
+    float: right;
+  }
 
-    & > img, & > ul {
-      margin: 0;
-    }
-
-    li a {
-      font-size: 1.75em;
-      line-height: 2.25em;
-      padding: 0.25em 0.5em;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: $text-color;
-      text-shadow: 1px 1px 1px $shadow-color;
-      &:hover {
-        border: 1px dashed $action-color;
-        border-radius: 0.5em;
-      }
+  .logo {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    img {
+      margin: 0 !important;
+      padding: 0 !important;
+      border: 0 !important;
+      height: $logo-height;
+      vertical-align: middle;
     }
   }
 }
