@@ -1,6 +1,6 @@
 ChicagoTeenMuseum::Application.routes.draw do
 
-  root to: 'high_voltage/pages#show', id: 'home'
+  root to: 'galleries#index'
 
   resources :users, :artworks, :galleries
 
