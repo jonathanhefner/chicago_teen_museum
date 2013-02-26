@@ -3,9 +3,7 @@
 
 
 .pagination {
-  @include inline-block;
-  margin: -1em 0 0 1em;
-  vertical-align: middle;
+  text-align: right;
 
   a {
     @include button(simple, $white);

@@ -1,13 +1,13 @@
-%h1
+%p.exhibit-tally
   Exhibiting
-  = pluralize(@artworks.total_count, 'Work')
+  %span.count= pluralize(@artworks.total_count, 'Work')
   - if @user
     by
     = link_to @user, user_path(@user)
   - if @gallery
-    in Gallery
+    in gallery
     = link_to @gallery, gallery_path(@gallery)
 
-= paginate @artworks
-
 = render 'shared/artworks_thumbs', artworks: @artworks, specific_user: @user.present?
+
+= paginate @artworks

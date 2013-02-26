@@ -1,4 +1,6 @@
-%h1= pluralize(@galleries.total_count, 'Gallery')
+%p.exhibit-tally
+  Exhibiting
+  %span.count= pluralize(@galleries.total_count, 'Gallery')
 
 %ul.thumbs
   - @galleries.each do |g|
@@ -6,3 +8,5 @@
       = link_to image_tag(g.thumb_url, class: 'thumb'), g
       .caption
         %h3= link_to g.title, g
+
+= paginate @galleries

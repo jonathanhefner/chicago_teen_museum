@@ -47,3 +47,14 @@ h1.name, .byline, .posted {
 .byline, .posted {
   color: $light-text-color;
 }
+
+.exhibit-tally {
+  text-align: right;
+  font-style: italic;
+  color: $light-text-color;
+
+  .count {
+    font-weight: bold;
+    color: $text-color;
+  }
+}
