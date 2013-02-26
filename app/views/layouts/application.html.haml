@@ -14,7 +14,7 @@
           - if signed_in?
             = link_to 'Your Profile', (signed_in? ? current_user : sign_in_path)
             = link_to 'Sign Out', sign_out_path, method: :delete
-            - else
+          - else
             = link_to 'Join Us!', sign_up_path, class: 'call-to-action'
             = link_to 'Sign In', sign_in_path
         %nav.content
