@@ -1,17 +1,18 @@
 source 'https://rubygems.org'
+ruby '1.9.3'
 
-gem 'rails', '3.2.11'
+gem 'rails', '3.2.12'
 gem 'jquery-rails'
 gem 'sqlite3', group: [:development, :test]
 gem 'pg', group: :production
 
-gem 'clearance', '1.0.0.rc2'
+gem 'clearance', '1.0.0.rc4'
 gem 'cancan'
 gem 'kaminari'
 
 gem 'haml'
 gem 'haml-rails' # https://github.com/indirect/haml-rails
-gem 'rdiscount'
+gem 'rdiscount', '1.6.8' # Forcing 1.6.8 due to https://github.com/rtomayko/rdiscount/issues/74
 gem 'formtastic'
 gem 'bourbon'
 gem 'neat'
