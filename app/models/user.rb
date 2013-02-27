@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   ADMIN_ROLE = 'admin'
 
   has_many :artworks, order: 'created_at DESC'
+  has_many :comments, order: 'created_at DESC'
 
   attr_accessible :email, :name, :biography, :birthday
 

@@ -1,13 +1,46 @@
+@import 'bourbon';
+@import 'colors';
+
 .artworks-show {
   .byline {
-    display: inline-block;
-    font-size: 1.2em;
-    margin-left: 0.5em;
-    vertical-align: middle;
+    line-height: 1.5em;
+    color: $light-text-color;
+
+    .timestamp {
+      float: right;
+      font-style: italic;
+    }
   }
 
-  .posted {
-    text-align: right;
+  form.comment {
+    margin: 1.5em 0;
+    text-align: center;
+
+    ol, li {
+      margin: 0;
+    }
+
+    #comment_body {
+      width: 100%;
+      height: 10em;
+    }
+
+    .submit {
+      @include button();
+      font-size: 1.15em;
+    }
+  }
+
+  ul.comments {
+    list-style: none;
+
+    li {
+      padding: 0.5em 0;
+
+      border-top: 1px solid $light-grey;
+      &:first-child {
+        border-top: 0;
+      }
+    }
   }
 }
-

@@ -40,12 +40,8 @@ h1, h2 {
 }
 
 
-h1.name, .byline, .posted {
+h1.name {
   font-style: italic;
-}
-
-.byline, .posted {
-  color: $light-text-color;
 }
 
 .exhibit-tally {

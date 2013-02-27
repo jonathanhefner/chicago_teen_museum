@@ -1,9 +1,5 @@
 %h1.name= @artwork.title
 
-%p.byline
-  by
-  = link_to @artwork.user
-
 - if can?(:update, @artwork)
   = link_to 'Edit Artwork', edit_artwork_path(@artwork), class: 'action'
 
@@ -11,11 +7,36 @@
   = link_to image_tag(@artwork.asset.url), @artwork.asset.url
   &nbsp;
 
-%p.posted
-  Posted
-  = distance_of_time_in_words_to_now @artwork.created_at
-  ago
+.byline
+  by
+  = link_to @artwork.user
+  %span.timestamp
+    Posted
+    = distance_of_time_in_words_to_now @artwork.created_at
+    ago
 
 .description
   :markdown
     #{@artwork.description}
+
+
+- if can?(:create, Comment)
+  = semantic_form_for Comment.new(artwork: @artwork) do |f|
+    = f.inputs do
+      = f.input :artwork_id, as: :hidden
+      = f.input :body, label: false
+      = f.submit 'Leave A Comment', disable_with: 'Submitting...', class: 'submit'
+
+
+%ul.comments
+  - @artwork.comments.each do |c|
+    - anchor = "comment-#{c.id}"
+    %li{ id: anchor }
+      .byline
+        = link_to c.user
+        said
+        %span.timestamp
+          = link_to "#{distance_of_time_in_words_to_now(c.created_at)} ago", "##{anchor}"
+      .body
+        :markdown
+          #{c.body}
