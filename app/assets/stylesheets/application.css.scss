@@ -20,14 +20,6 @@
 @import 'colors';
 
 
-h1 > a, h1 > a:link, h1 > a:visited,
-h2 > a, h2 > a:link, h2 > a:visited,
-h3 > a, h3 > a:link, h3 > a:visited {
-  text-decoration: none;
-  &:hover { text-decoration: underline; }
-}
-
-
 a.action {
   @include button(simple);
   margin: -1em 0 0 1em;
@@ -67,6 +59,7 @@ input[type=submit] {
 }
 
 .exhibit-tally {
+  margin-bottom: 1em;
   text-align: right;
   font-style: italic;
   color: $light-text-color;
@@ -75,4 +68,8 @@ input[type=submit] {
     font-weight: bold;
     color: $text-color;
   }
+}
+
+.description, .biography {
+  margin: 0.5em 0 1em 0;
 }
