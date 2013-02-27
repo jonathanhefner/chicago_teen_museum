@@ -16,7 +16,7 @@ gem 'rdiscount', '1.6.8' # Forcing 1.6.8 due to https://github.com/rtomayko/rdis
 gem 'formtastic'
 gem 'bourbon'
 gem 'neat'
-gem 'flutie'
+gem 'flutie', '1.3.4' # later versions do NOT provide base CSS styling
 gem 'high_voltage'
 
 gem 'paperclip'
