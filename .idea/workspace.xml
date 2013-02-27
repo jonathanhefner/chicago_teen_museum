@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f86d5480-d6de-4865-a0db-90429a631a88" name="Default" comment="basic Comment system">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/comments_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/comment.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130227210724_create_comments.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/models/comment_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/chicago_teen_museum.iml" afterPath="$PROJECT_DIR$/.idea/chicago_teen_museum.iml" />
+    <list default="true" id="f86d5480-d6de-4865-a0db-90429a631a88" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/_colors.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/_colors.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/artworks_show.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/artworks_show.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ability.rb" afterPath="$PROJECT_DIR$/app/models/ability.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/artwork.rb" afterPath="$PROJECT_DIR$/app/models/artwork.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/artworks/show.html.haml" afterPath="$PROJECT_DIR$/app/views/artworks/show.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="chicago_teen_museum.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,7 +31,7 @@
       <file leaf-file-name="artworks_show.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/artworks_show.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="22" selection-start="595" selection-end="595" vertical-scroll-proportion="0.0">
+            <state line="20" column="5" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -70,7 +58,16 @@
       <file leaf-file-name="application.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="7" selection-start="963" selection-end="963" vertical-scroll-proportion="0.0">
+            <state line="61" column="1" selection-start="1185" selection-end="1185" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_dimensions.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/_dimensions.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="0" selection-start="106" selection-end="119" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -79,7 +76,7 @@
       <file leaf-file-name="show.html.haml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/artworks/show.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="0" selection-start="995" selection-end="995" vertical-scroll-proportion="0.8438597">
+            <state line="24" column="17" selection-start="514" selection-end="514" vertical-scroll-proportion="0.7157895">
               <folding />
             </state>
           </provider>
@@ -117,8 +114,8 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/_colors.scss" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/layout.css.scss" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/artworks_show.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/artworks_show.css.scss" />
         <option value="$PROJECT_DIR$/app/views/artworks/show.html.haml" />
       </list>
     </option>
@@ -1048,7 +1045,11 @@
       <created>1362005715093</created>
       <updated>1362005715093</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="basic Comment system">
+      <created>1362007161609</created>
+      <updated>1362007161609</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1132,7 +1133,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="rolling back flutie version to provide missing base CSS styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic Comment system" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1145,7 +1146,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="attempt to fix asset compilation for production" />
     <MESSAGE value="fix for User name in profile" />
     <MESSAGE value="fix byline links for thumbs" />
     <MESSAGE value="fix permissions for reading Users and Artworks" />
@@ -1170,6 +1170,7 @@
     <MESSAGE value="configure to send email via Gmail" />
     <MESSAGE value="fix for previous migration" />
     <MESSAGE value="rolling back flutie version to provide missing base CSS styling" />
+    <MESSAGE value="basic Comment system" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1210,13 +1211,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/_dimensions.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="28" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0">
@@ -1252,16 +1246,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/artworks_show.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/_dimensions.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="22" selection-start="595" selection-end="595" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/thumbs.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="4" column="0" selection-start="106" selection-end="119" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1275,14 +1262,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="7" selection-start="963" selection-end="963" vertical-scroll-proportion="0.0">
+        <state line="61" column="1" selection-start="1185" selection-end="1185" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/artworks_show.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="5" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/thumbs.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/artworks/show.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="995" selection-end="995" vertical-scroll-proportion="0.8438597">
+        <state line="24" column="17" selection-start="514" selection-end="514" vertical-scroll-proportion="0.7157895">
           <folding />
         </state>
       </provider>
