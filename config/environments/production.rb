@@ -74,4 +74,20 @@ ChicagoTeenMuseum::Application.configure do
       secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
+
+  # Configure ActionMailer to send email via Gmail
+  config.action_mailer.default_url_options = { host: 'chicagoteenmuseum.herokuapp.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default charset: 'utf-8'
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.gmail.com',
+    port: 587,
+    domain: 'chicagoteenmuseum.herokuapp.com',
+    authentication: 'plain',
+    enable_starttls_auto: true,
+    user_name: ENV['GMAIL_USERNAME'],
+    password: ENV['GMAIL_PASSWORD']
+  }
 end
