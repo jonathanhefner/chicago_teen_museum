@@ -11,7 +11,7 @@ class Ability
         can [:create, :update, :destroy], Artwork, user_id: user.id
         can [:update, :destroy], User, id: user.id
       else
-        can :create, User, type: 'normal'
+        can :create, User, role: 'normal'
       end
     end
   end
