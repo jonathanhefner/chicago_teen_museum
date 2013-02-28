@@ -7,7 +7,6 @@
     %li
       .image-container
         = link_to image_tag(g.thumb_url, class: 'thumb'), g
-      .caption
-        %h3= link_to g.title, g
+      .caption= link_to g.title, g
 
 = paginate @galleries
