@@ -13,4 +13,4 @@
   - if @user == current_user && can?(:create, Artwork)
     = link_to 'Post Artwork', new_artwork_path, class: 'action'
 
-  = render 'shared/artworks_thumbs', artworks: @user.artworks.limit(9), specific_user: true
+  = render 'shared/thumbs', models: @user.artworks.limit(9)

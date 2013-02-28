@@ -10,4 +10,4 @@
 - if @gallery.artworks.any?
   %h2= link_to 'Recent Additions', artworks_path(gallery: @gallery)
 
-  = render 'shared/artworks_thumbs', artworks: @gallery.artworks.limit(9)
+  = render 'shared/thumbs', models: @gallery.artworks.limit(9)

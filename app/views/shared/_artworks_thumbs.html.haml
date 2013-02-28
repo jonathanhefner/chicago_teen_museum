@@ -1,9 +1,0 @@
-- artworks ||= []
-- specific_user ||= false
-
-%ul.thumbs
-  - artworks.each do |a|
-    %li
-      .image-container
-        = link_to image_tag(a.thumb_url, class: 'thumb'), a
-      .caption= link_to a.title, a

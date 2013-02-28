@@ -8,6 +8,6 @@
     in gallery
     = link_to @gallery, gallery_path(@gallery)
 
-= render 'shared/artworks_thumbs', artworks: @artworks, specific_user: @user.present?
+= render 'shared/thumbs', models: @artworks
 
 = paginate @artworks
