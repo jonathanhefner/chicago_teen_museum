@@ -23,4 +23,8 @@ class Artwork < ActiveRecord::Base
   def thumb_url
     asset.url(:thumb)
   end
+
+  def similar
+    user.artworks.where('id <> ?', id)
+  end
 end

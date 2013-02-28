@@ -1,4 +1,5 @@
 @import 'bourbon';
+@import 'neat';
 @import 'colors';
 
 .artworks-show {
@@ -9,6 +10,19 @@
     .timestamp {
       float: right;
       font-style: italic;
+    }
+  }
+
+  .feedback {
+    @include span-columns(8);
+  }
+
+  .more-artwork {
+    @include span-columns(4);
+
+    h3 {
+      margin: 1.5em 0 0.5em 0;
+      text-align: center;
     }
   }
 
@@ -23,6 +37,7 @@
 
   ul.comments {
     list-style: none;
+    padding: 0 1em;
 
     li {
       padding: 0.5em 0;

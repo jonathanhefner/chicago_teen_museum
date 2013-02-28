@@ -20,23 +20,29 @@
     #{@artwork.description}
 
 
-- if can?(:create, Comment)
-  = semantic_form_for Comment.new(artwork: @artwork) do |f|
-    = f.inputs do
-      = f.input :artwork_id, as: :hidden
-      = f.input :body, label: false
-      = f.submit 'Leave A Comment', disable_with: 'Submitting...'
+.feedback
+  - if can?(:create, Comment)
+    = semantic_form_for Comment.new(artwork: @artwork) do |f|
+      = f.inputs do
+        = f.input :artwork_id, as: :hidden
+        = f.input :body, label: false
+        = f.submit 'Leave A Comment', disable_with: 'Submitting...'
 
 
-%ul.comments
-  - @artwork.comments.each do |c|
-    - anchor = "comment-#{c.id}"
-    %li{ id: anchor }
-      .byline
-        = link_to c.user
-        said
-        %span.timestamp
-          = link_to "#{distance_of_time_in_words_to_now(c.created_at)} ago", "##{anchor}"
-      .body
-        :markdown
-          #{c.body}
+  %ul.comments
+    - @artwork.comments.each do |c|
+      - anchor = "comment-#{c.id}"
+      %li{ id: anchor }
+        .byline
+          = link_to c.user
+          said
+          %span.timestamp
+            = link_to "#{distance_of_time_in_words_to_now(c.created_at)} ago", "##{anchor}"
+        .body
+          :markdown
+            #{c.body}
+
+- if @artwork.similar.any?
+  .more-artwork
+    %h3= link_to "More by #{@artwork.user}", artworks_path(user: @artwork.user)
+    = render 'shared/thumbs', models: @artwork.similar.limit(3)
