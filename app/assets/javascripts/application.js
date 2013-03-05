@@ -20,7 +20,7 @@ $(function() {
     var thumbMargin = parseInt(thumbs.children('li').css('margin-bottom'));
     thumbs.imagesLoaded(function() {
         this.masonry({
-            itemSelector: 'li',
+            itemSelector: 'li.thumb',
             isFitWidth: true,
             columnWidth: 275,
             gutterWidth: thumbMargin

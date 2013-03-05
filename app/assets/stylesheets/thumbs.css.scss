@@ -7,7 +7,7 @@ ul.thumbs {
   list-style-type: none;
   margin: 0 auto;
 
-  li {
+  & > li {
     width: $image-thumbnail-width;
     margin-bottom: $gutter-width;
     background: $white;
@@ -19,6 +19,22 @@ ul.thumbs {
       text-shadow: 1px 1px 1px $light-grey;
       a {
         text-decoration: none;
+      }
+    }
+
+    ul.comments {
+      list-style-type: none;
+      margin: 0;
+      background: $lightest-grey;
+      font-size: 0.8em;
+
+      li {
+        border-top: 1px solid $light-grey;
+        padding: 0.5em 0.75em;
+
+        a.commenter {
+          padding-right: 0.5em;
+        }
       }
     }
   }

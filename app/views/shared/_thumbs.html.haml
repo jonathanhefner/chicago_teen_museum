@@ -1,8 +1,15 @@
 - models ||= []
+- max_comments ||= 0
 
 %ul.thumbs
   - models.each do |m|
-    %li
+    %li.thumb
       .image-container
-        = link_to image_tag(m.thumb_url, class: 'thumb'), m
+        = link_to image_tag(m.thumb_url), m
       .caption= link_to m.title, m
+      - if max_comments > 0
+        %ul.comments
+          - m.comments.limit(max_comments).each do |c|
+            %li
+              = link_to c.user, c.user, class: 'commenter'
+              = truncate(c.body, length: 80)

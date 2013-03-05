@@ -3,7 +3,7 @@ class ArtworksController < ApplicationController
   respond_to :html
 
   def index
-    @artworks = @artworks.includes(:user).page(params[:page])
+    @artworks = @artworks.includes(:comments => :user).page(params[:page])
 
     if params[:user]
       @artworks = @artworks.where(user_id: params[:user])
