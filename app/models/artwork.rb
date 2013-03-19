@@ -10,7 +10,7 @@ class Artwork < ActiveRecord::Base
   validates :title, presence: true
   validates_attachment :asset, presence: true, size: { in: 0..3.megabytes }
 
-  attr_accessible :title, :asset, :description
+  attr_accessible :title, :asset, :description, :gallery_ids
 
   scope :in_gallery, lambda {|gallery_id|
     gallery_id = gallery_id.id if gallery_id.is_a?(Gallery)

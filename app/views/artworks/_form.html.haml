@@ -1,3 +1,8 @@
 = semantic_form_for @artwork do |f|
-  = f.inputs :title, :description, :asset
+  = f.inputs do
+    = f.input :title
+    = f.input :description
+    = f.input :asset, label: 'Image File'
+  = f.inputs name: 'Include My Art In These Galleries' do
+    = f.input :galleries, as: :check_boxes, label: false
   = f.actions

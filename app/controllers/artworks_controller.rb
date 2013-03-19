@@ -24,7 +24,10 @@ class ArtworksController < ApplicationController
   end
 
   def update
-    @artwork.save
+    # NOTE load_and_authorize_resource doesn't load gallery_ids during
+    #  an update like it does during a create
+    @artwork.save && (@artwork.gallery_ids = params[:artwork][:gallery_ids])
     respond_with(@artwork)
   end
+
 end
