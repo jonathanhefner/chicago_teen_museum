@@ -6,7 +6,7 @@ gem 'jquery-rails'
 gem 'sqlite3', group: [:development, :test]
 gem 'pg', group: :production
 
-gem 'clearance', '1.0.0.rc4'
+gem 'clearance', '1.0.0.rc6'
 gem 'cancan'
 gem 'kaminari'
 

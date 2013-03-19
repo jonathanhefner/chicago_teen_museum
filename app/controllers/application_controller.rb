@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  include Clearance::Authentication
+  include Clearance::Controller
   protect_from_forgery
 
   rescue_from CanCan::AccessDenied do |exception|
