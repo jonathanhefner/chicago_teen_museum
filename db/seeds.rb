@@ -15,7 +15,7 @@ Gallery.create([
   { title: 'What a Wonderful World This Could Be',
     description: 'From climate change and the environment to social change or humanitarian acts, show us how you make this world a better place.' },
 
-  { title: '"Make My Day..."',
+  { title: 'Make My Day',
     description: 'Bullying affects all of us in one way or another. How has it affected you? What can we do to stop it?' },
 
   { title: 'Silly String',
@@ -33,7 +33,7 @@ Gallery.create([
   { title: 'Fabuloso',
     description: 'What\'s trending with you? Show us why your fashion, music, and fads should be loved by all.' },
 
-  { title: 'Something Tells Me I\'m ...',
+  { title: 'Something Tells Me I\'m [BLANK]',
     description: 'Fill in the blank.' },
 
   { title: 'Seriously Folks',
