@@ -1,7 +1,7 @@
 class Artwork < ActiveRecord::Base
   belongs_to :user
-  has_and_belongs_to_many :galleries
-  has_many :comments, order: 'created_at'
+  has_and_belongs_to_many :galleries, order: :title
+  has_many :comments, order: :created_at
 
   has_attached_file :asset, styles: { thumb: '275' }
   before_post_process :image?
