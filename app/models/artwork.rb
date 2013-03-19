@@ -6,6 +6,7 @@ class Artwork < ActiveRecord::Base
   has_attached_file :asset, styles: { thumb: '275' }
   before_post_process :image?
 
+  validates :user, presence: true
   validates :title, presence: true
   validates_attachment :asset, presence: true, size: { in: 0..3.megabytes }
 
