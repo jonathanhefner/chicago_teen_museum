@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" compressed="false" hash="2893993505" />
+  <component name="DataSourceManagerImpl" format="xml" hash="2893993505">
+    <data-source source="LOCAL" name="Rails chicago_teen_museum: development" uuid="b1ad5cd0-92e2-4aa5-aa95-308ce4fc3996">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:D:\chicago_teen_museum\db\development.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails chicago_teen_museum: test" uuid="110db524-0a0b-489f-85d5-fa0c2326575a">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:D:\chicago_teen_museum\db\test.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails chicago_teen_museum: production" uuid="cf4cc6ee-0aa3-4bb5-8ba4-7156de89f00c">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:D:\chicago_teen_museum\db\production.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
 </project>
 

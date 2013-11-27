@@ -14,6 +14,7 @@ class GalleriesController < ApplicationController
   end
 
   def update
+    @gallery.assign_attributes(params[:gallery])
     @gallery.save
     respond_with(@gallery)
   end
